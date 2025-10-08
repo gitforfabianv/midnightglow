@@ -30,7 +30,7 @@ permalink: /pinned/
       <!-- Overlay container (scrollable) -->
       <div class="post-overlay">
         <div class="post-image">
-          <img src="{{ post.image | default: '/assets/images/default.png' }}" alt="{{ post.title }}">
+          <img src="{{ post.image | default: site.baseurl | append: '/assets/images/default.png' }}" alt="{{ post.title }}">
         </div>
         <div class="post-header">
           <h3>{{ post.title }}</h3>

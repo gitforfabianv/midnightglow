@@ -1,0 +1,237 @@
+:root {
+  --color-bg: #00202e;
+  --color-slate: #1e1e1e;
+  --color-blueslate: #00151f;
+  --color-surface: #003f5c;
+  --color-primary: #2c4875;
+  --color-secondary: #8a508f;
+  --color-accent: #97c46d;
+  --color-hoveraccent: #c3e6a2;
+  --color-detail: #bc5090;
+  --color-error: #ff6361;
+  --color-warning: #ff8531;
+  --color-notice: #ffa600;
+  --color-swash: #ffd380;
+
+  --color-text: #fff;
+  --color-text-muted: #888888;
+
+  --trail-1: var(--color-primary);
+  --trail-2: var(--color-secondary);
+  --trail-3: var(--color-hyper);
+  --trail-4: var(--color-detail);
+  --trail-5: var(--color-error);
+  --trail-6: var(--color-warning);
+  --trail-7: var(--color-notice);
+  --trail-8: var(--color-swash);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1 {
+  color: var(--color-warning);
+}
+
+a {
+}
+
+a:hover {
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+nav a:nth-child(1) {
+  background-color: var(--color-primary);
+}
+nav a:nth-child(2) {
+  background-color: var(--color-notice);
+}
+nav a:nth-child(3) {
+  background-color: var(--color-error);
+}
+nav a:nth-child(4) {
+  background-color: var(--color-detail);
+}
+nav a:nth-child(5) {
+  background-color: var(--color-accent);
+}
+nav a:nth-child(6) {
+  background-color: var(--color-secondary);
+}
+nav a:nth-child(7) {
+  background-color: var(--color-swash);
+}
+nav a:nth-child(8) {
+  background-color: var(--color-warning);
+}
+nav a:nth-child(9) {
+  background-color: var(--color-hoveraccent);
+}
+
+.sidebar {
+  background: black;
+}
+
+.social-icons a {
+  color: #fff;
+}
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.navbar {
+  background-color: black;
+  border-bottom: 3px double var(--color-secondary);
+}
+
+.content {
+  border-left: 3px double var(--color-warning);
+}
+
+.post-card {
+  background: black;
+  border-left: 3px double var(--color-accent);
+  border-radius: 8px;
+}
+
+.accordion-content i {
+  color: #fff;
+}
+
+/*Background trails*/
+
+.trail-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #0c0c0c;
+  contain: layout paint style;
+}
+
+/* Base trail style */
+.trail-bg span {
+  position: absolute;
+  width: 40vmin;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--trail-color) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+
+  /* preferred with color-mix (overrides above if supported) */
+  background: linear-gradient(
+    to right,
+    var(--trail-color) 0%,
+    color-mix(in srgb, var(--trail-color) 30%, transparent) 50%,
+    transparent 100%
+  );
+
+  filter: drop-shadow(0 0 6px var(--trail-color));
+
+  transform-origin: 0 50%;
+  opacity: 0;
+  animation: sweep var(--dur, 20s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+/* Pseudo-random color assignment */
+.trail-bg span:nth-child(8n + 1) {
+  --trail-color: var(--trail-1);
+}
+.trail-bg span:nth-child(8n + 2) {
+  --trail-color: var(--trail-2);
+}
+.trail-bg span:nth-child(8n + 3) {
+  --trail-color: var(--trail-3);
+}
+.trail-bg span:nth-child(8n + 4) {
+  --trail-color: var(--trail-4);
+}
+.trail-bg span:nth-child(8n + 5) {
+  --trail-color: var(--trail-5);
+}
+.trail-bg span:nth-child(8n + 6) {
+  --trail-color: var(--trail-6);
+}
+.trail-bg span:nth-child(8n + 7) {
+  --trail-color: var(--trail-7);
+}
+.trail-bg span:nth-child(8n) {
+  --trail-color: var(--trail-8);
+}
+
+/* Motion and fade */
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--rot)) translateX(120vmax);
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--rot)) translateX(-20vmax);
+  }
+}
+
+/* Pseudo-randomized presets via nth-child */
+.trail-bg span:nth-child(6n + 1) {
+  --rot: 18deg;
+  --dur: 24s;
+  --delay: -6s;
+  top: 12%;
+  left: 8%;
+}
+.trail-bg span:nth-child(6n + 2) {
+  --rot: -32deg;
+  --dur: 28s;
+  --delay: -12s;
+  top: 68%;
+  left: 10%;
+}
+.trail-bg span:nth-child(6n + 3) {
+  --rot: 74deg;
+  --dur: 22s;
+  --delay: -3s;
+  top: 40%;
+  left: 86%;
+}
+.trail-bg span:nth-child(6n + 4) {
+  --rot: -65deg;
+  --dur: 26s;
+  --delay: -15s;
+  top: 78%;
+  left: 60%;
+}
+.trail-bg span:nth-child(6n + 5) {
+  --rot: 8deg;
+  --dur: 30s;
+  --delay: -9s;
+  top: 22%;
+  left: 52%;
+}
+.trail-bg span:nth-child(6n) {
+  --rot: 145deg;
+  --dur: 34s;
+  --delay: -18s;
+  top: 55%;
+  left: 22%;
+}

@@ -1,0 +1,36 @@
+# Site settings
+title: Midnight Glow
+email: emailforfabian.v@gmail.com
+description: >-
+  A place for projects,
+  lessons learned, and the ocassional personal interest.
+  Documenting the process and celebrating the journey.
+baseurl: "midnightglow" # Set to "/blog" if deploying to a subdirectory
+url: "" # Replace with your actual domain when deploying
+twitter_username: xforfabianv
+github_username: gitforfabianv
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# Sass/CSS settings (optional if using SCSS or Tailwind)
+sass:
+  style: compressed
+
+# Include custom assets
+include:
+  - assets/css/main.css
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+  </head>
+  <body>
+    <div class="trail-bg" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span
+      ><span></span> <span></span><span></span><span></span><span></span
+      ><span></span><span></span> <span></span><span></span><span></span
+      ><span></span><span></span><span></span> <span></span><span></span
+      ><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Hidden checkbox controls sidebar state -->
+    <input type="checkbox" id="sidebar-toggle" hidden />
+
+    <div class="layout">
+      <aside class="sidebar">{% include sidebar.html %}</aside>
+
+      <div class="main-area">
+        <header class="navbar">{% include navbar.html %}</header>
+        <main class="content">
+          <div class="page-adjustments">{{ content }}</div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

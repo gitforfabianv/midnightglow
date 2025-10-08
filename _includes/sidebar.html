@@ -1,0 +1,38 @@
+<!-- Hidden checkbox controls sidebar state -->
+<input type="checkbox" id="sidebar-toggle" hidden />
+
+<!-- Close button -->
+<label for="sidebar-toggle" class="close-sidebar">
+  <i class="fas fa-times"></i>
+</label>
+
+<div class="profile-div">
+  <div class="profile-image">
+    <img
+      src="{{ site.baseurl }}/assets/images/midnightglowlogo.png"
+      alt="Profile image"
+    />
+  </div>
+
+  <div class="social-icons">
+    <a href="https://twitter.com" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://github.com" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</div>
+
+<nav>
+  <a href="{{ site.baseurl }}/"><i class="fas fa-house"></i> </a>
+  <a href="{{ site.baseurl }}/about/"><i class="fas fa-info-circle"></i> </a>
+  <a href="{{ site.baseurl }}/pinned/"><i class="fa fa-thumb-tack"></i></a>
+  <a href="{{ site.baseurl }}/categories/"><i class="fa fa-folder"></i></a>
+
+  <a href="{{ site.baseurl }}/archived/"><i class="fa fa-archive"></i></a>
+  <a href="{{ site.baseurl }}/coffee/"><i class="fa fa-coffee"></i></a>
+</nav>

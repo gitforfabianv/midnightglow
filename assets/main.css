@@ -366,6 +366,7 @@ nav {
     background: black;
     transition: left 0.3s ease;
     z-index: 1000;
+    overscroll-behavior: contain;
 
     /* override desktop flex behaviour */
     display: flex;

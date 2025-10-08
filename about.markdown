@@ -20,6 +20,8 @@ Built for **text-first bloggers**, it puts your words front and center. Whether 
 
 If you're drawn to clean lines, vintage charm, and a writing-centric layout, this theme might just be your perfect match.
 
+Reach me at emailforfabian.v@gmail.com
+
 You can find the source code for Midnight Glow at GitHub:
 [Fabian V's Github](https://www.github.com/gitforfabianv) /
 [Midnight Glow Theme](https://github.com/gitforfabianv)
